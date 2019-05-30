@@ -9,7 +9,7 @@ CFLAGS = -Wall -g
 all:$(TARGETS)
 
 $(TARGETS):%:%.c
-	$(CC) $< $(CFLAGS) -I$(INC) -L$(LIB) -l:libapue.a -o $@.out
+	$(CC) -D_GNU_SOURCE $< $(CFLAGS) -I$(INC) -L$(LIB) -l:libapue.a -o $@.out
 
 .PHONY:clean all
 clean:
