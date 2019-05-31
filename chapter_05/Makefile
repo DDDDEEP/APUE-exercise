@@ -9,7 +9,7 @@ CFLAGS = -Wall -g
 all:$(TARGETS)
 
 $(TARGETS):%:%.c
-	$(CC) $< $(CFLAGS) -I$(INC) -L$(LIB) -l:libapue.a -o $@.out
+	$(CC) $< $(CFLAGS) -I$(INC) -L$(LIB) -l:libapue.a -ltoolkit -Wl,-rpath=$(LIB) -o $@.out
 
 .PHONY:clean all
 clean:
