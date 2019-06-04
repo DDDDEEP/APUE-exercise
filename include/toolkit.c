@@ -10,4 +10,4 @@ void pr_stdio(const char *name, FILE *fp)
     else  
         printf("fully buffered");  
     printf(", buffer size = %ld\n", fp->_IO_buf_end - fp->_IO_buf_base);  
-}  
+}
